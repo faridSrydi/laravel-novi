@@ -11,7 +11,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="relative aspect-[16/8] md:aspect-[21/8] bg-pink-50">
-                            <img src="{{ asset('assets/images/slider/slider1.jpg') }}"
+                            <img src="{{ asset('assets/slider/slider1.jpg') }}"
                                 class="w-full h-full object-cover opacity-90" alt="Promo Jajanan">
                             
                             <div class="absolute inset-0 bg-gradient-to-r from-pink-100/90 via-white/40 to-transparent flex items-center p-8 md:p-16">
@@ -35,7 +35,7 @@
 
                     <div class="swiper-slide">
                         <div class="relative aspect-[16/8] md:aspect-[21/8] bg-blue-50">
-                            <img src="{{ asset('assets/images/slider/slider2.jpg') }}"
+                            <img src="{{ asset('assets/slider/slider2.jpg') }}"
                                 class="w-full h-full object-cover opacity-90" alt="Promo Minuman">
                             <div class="absolute inset-0 bg-gradient-to-r from-blue-100/90 via-white/40 to-transparent flex items-center p-8 md:p-16">
                                 <div class="max-w-md space-y-4">
