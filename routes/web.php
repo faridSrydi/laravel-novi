@@ -6,8 +6,8 @@ use App\Http\Controllers\User\AddressController as UserAddressController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
-
-
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\File;
 
 
 
@@ -22,6 +22,24 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/product/{slug}', [HomeController::class, 'show'])
     ->name('product.show');
 
+Route::get('/migrate-fresh', function () {
+    // Menjalankan migrate:fresh (drop semua tabel lalu migrasi ulang)
+    // --force wajib digunakan jika aplikasi berada dalam mode production
+    Artisan::call('migrate:fresh', [
+        '--force' => true,
+        '--seed' => true // Opsional: Tambahkan ini jika ingin menjalankan seeder sekaligus
+    ]);
+    
+    return "Database telah di-reset (fresh) dan di-seed!";
+});
+
+Route::get('/optimize', function() {
+    Artisan::call('config:cache');
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    return "Optimized!";
+});
 
 Route::middleware('auth')->group(function () {
     // Tambahkan route ini untuk menangani tombol "Tambah ke Keranjang"
