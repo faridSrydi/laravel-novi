@@ -151,7 +151,7 @@
                     </button>
 
                     <div class="hidden sm:block">
-                        <h1 class="font-black text-gray-800 leading-none tracking-tight uppercase">LARACLO <span
+                        <h1 class="font-black text-gray-800 leading-none tracking-tight uppercase">MINIMOO <span
                                 class="text-pink-500">GARDEN</span></h1>
                         <p class="text-[10px] font-bold text-pink-300 uppercase tracking-[0.2em] mt-1">Admin Sweet
                             Control</p>
@@ -161,11 +161,11 @@
                 <div class="flex items-center gap-3 md:gap-6">
                     <div class="hidden md:block text-right">
                         <p class="text-[9px] font-black text-pink-300 uppercase tracking-widest">Active Admin</p>
-                        <p class="text-sm font-bold text-gray-700 capitalize">{{ auth()->user()->name }} ✨</p>
+                        <p class="text-sm font-bold text-gray-700 capitalize">Novi Cantik ✨</p>
                     </div>
                     <div
                         class="w-10 h-10 bg-pink-100 rounded-full border-2 border-white flex items-center justify-center text-pink-500 font-bold shrink-0">
-                        {{ substr(auth()->user()->name, 0, 1) }}
+                        Novi Cantik
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
 
         <footer class="py-10 px-4 text-center">
             <p class="text-[11px] font-black text-pink-200 uppercase tracking-[0.4em]">
-                Handcrafted with love & candies &bull; Laraclo v2.4
+                Handcrafted with love & candies &bull; MiniMOO v2.4
             </p>
         </footer>
     </div>
