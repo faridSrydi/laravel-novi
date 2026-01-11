@@ -41,6 +41,11 @@ Route::get('/optimize', function() {
     return "Optimized!";
 });
 
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+    return "Storage link created!";
+});
+
 Route::middleware('auth')->group(function () {
     // Tambahkan route ini untuk menangani tombol "Tambah ke Keranjang"
     Route::post('/cart/add', [CheckoutController::class, 'addToCart'])->name('cart.add');
